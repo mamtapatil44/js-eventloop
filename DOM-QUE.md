@@ -93,3 +93,44 @@
  #         By default, events inside the Shadow DOM do not escape. However, if an event is created with { composed: true },   it can cross the shadow boundary and propagate to the light DOM.
  #
  #
+
+
+
+
+
+ # 9. Explain the concept of reflow and repaint in the browser and how they impact performance.
+ # When you modify the DOM or apply styles, the browser must update the page. This process involves reflow and repaint, which affect rendering performance.
+ # #What is Reflow?
+ # - Reflow (also called layout) occurs when the browser recalculates the positions and dimensions of elements due to changes in the DOM or CSS.
+ # - It affects the entire page or a portion of it, depending on the changes made.
+ # #What Causes Reflow?
+ #      -Adding, removing, or modifying elements in the DOM
+ #      -Changing an element’s size, width, height, padding, margin, border
+ #      -Changing font size or content inside an element
+ #      -Calling getComputedStyle() or layout properties like offsetHeight, offsetWidth
+ #      -Applying CSS animations or transitions that affect layout
+ #  #Performance Impact
+ # ----Reflow is expensive because the browser must:
+ #      -Recalculate layout for affected elements
+ #      -Recalculate child elements (since parent changes affect children)
+ #      -Repaint everything if necessary
+ #  ###What is Repaint?
+ #     -Repaint happens when visual changes occur without affecting layout (no recalculating positions or sizes).
+ #     -It's faster than reflow because only the pixel colors need to be updated.
+# #### What Causes Repaint?
+#   -Changing colors, visibility (opacity, background, box-shadow)
+#   -Updating text color or border color
+#   -Applying CSS effects like shadows, outlines, or filters
+ # ###Performance Impact
+#    Less costly than reflow, but still impacts performance.
+#    Too many repaints (e.g., frequent color changes) can slow down rendering
+ #
+ # to optimzation use css claases classlist to it will changes only once
+ # Use visibility: hidden Instead of display: none
+ #
+
+
+
+ # 10.How does the contenteditable attribute affect event handling and DOM manipulation?
+ # The contenteditable attribute allows users to edit an element’s content directly in the browser. However, this introduces unique behavior regarding event handling, DOM manipulation, and performance.
+ #
