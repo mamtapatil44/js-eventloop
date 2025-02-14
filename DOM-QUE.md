@@ -18,4 +18,7 @@
 #                            a.Represents the text content of an element (without any HTML formatting).
 #                            b.does not interpret any HTML tags.
 #                            c.Safer than innerHTML when inserting user-generated content because it prevents HTML inj.
+# uses : Use innerHTML when you need to insert HTML dynamically.
+#        Use outerHTML when you need to replace an entire element.
+#        Use textContent when you want to set or retrieve only text without parsing HTML.
  
