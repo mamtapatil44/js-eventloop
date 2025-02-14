@@ -4,5 +4,18 @@
 
 
 
-# 2.Explain the difference between innerHTML, outerHTML, and textContent in JavaScript
+# 2.Explain the difference between innerHTML, outerHTML, and textContent in JavaScript?
+# ans: 
+# a. In JavaScript, innerHTML, outerHTML, and textContent are properties used to manipulate or retrieve content from an HTML element, but they have different purposes.
+#               1.innerHtml: a.Represents the HTML content inside an element
+#                            b. can be set and get html content
+#                            c. If used to set content, it parses HTML and renders it as actual elements.
+#               2.outerHTML:
+#                            a.Represents the entire element (including itself).
+#                            b.When getting outerHTML, it returns the entire element as an HTML string.
+#                            c.When setting outerHTML, it replaces the element itself with the new HTML element
+#               3.textContent :
+#                            a.Represents the text content of an element (without any HTML formatting).
+#                            b.does not interpret any HTML tags.
+#                            c.Safer than innerHTML when inserting user-generated content because it prevents HTML inj.
  
