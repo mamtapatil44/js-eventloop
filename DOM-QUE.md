@@ -53,4 +53,24 @@
  # When changes happen, the callback function receives a list of mutation records detailing what changed.
  # there are three types of mutuation tye = childlist, attributes,characterData
  #
- #
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ # 6. What are the pros and cons of using appendChild() vs  insertAdjacentHTML()?
+ # Both appendChild() and insertAdjacentHTML() allow you to modify the DOM, but they serve different purposes and have unique advantages and disadvantages.
+ # 1.appendChild() : The appendChild() method is used to add a DOM element as a child of another element. It only works with Node objects not working with raw HTML strings.
+ # 2.insertAdjacentHTML(): The insertAdjacentHTML() method inserts raw HTML as a string at a specific position relative to an element (beforebegin, afterbegin, beforeend, afterend).
+ # Use appendChild() :
+ #         a.You are working with DOM elements (createElement()).
+ #         b.Security is a concern to prevents XSS attacks.
+ #         c.You need to manipulate the element after inserting it.
+ # Use insertAdjacentHTML()
+ #         a.You want to insert raw HTML as a string.
+ #         b.You need precise positioning (beforebegin, afterbegin, etc.).
+ #         c.You are working with large chunks of static HTML (e.g., rendering templates).
+
+ 
