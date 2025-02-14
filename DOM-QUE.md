@@ -26,9 +26,9 @@
 
 # 3. How would you dynamically create and append multiple elements to the DOM without causing excessive reflows?
 # ans: 4ways : Use a Document Fragment , Use innerHTML for Large Batches , Use append() or appendChild() in Bulk and Use requestAnimationFrame() for Heavy Updates.
-#        A DocumentFragment : is an in-memory lightweight container that allows batch operations before attaching   e elements to the actual DOM. This prevents excessive reflows.For this we cn use createDocumentFragment() , use for loop for bulk operatins and append to body with childAppend(),Efficient: Only one reflow occurs when the fragment is appended.
-#
-#
+#       # A DocumentFragment : is an in-memory lightweight container that allows batch operations before attaching   e elements to the actual DOM. This prevents excessive reflows.For this we cn use createDocumentFragment() , use for loop for bulk operatins and append to body with childAppend(),Efficient: Only one reflow occurs when the fragment is appended.
+#       # innerHtml :with this we can Insert all at once atlast if iteration done, for this we need one htmlstring variable whole stores all values of iteration and after fooer loop we can attached it using innerHtml property
+#      # Use append() or appendChild() : When working with Node.append() or Node.appendChild(), batch operations before appending to reduce layout recalculations.
 #
 #
 #
