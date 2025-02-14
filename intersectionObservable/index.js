@@ -9,7 +9,7 @@ function createRow(item){
 const observable =  new IntersectionObserver(entries=>{
     entries.forEach((entry)=>{
         if(entry.isIntersecting){
-            entry.target.append(createRow(entry.target.dataset.index))
+            entry.target.appendChild(createRow(entry.target.dataset.index))
             observable.unobserve(entry.target)
         }
     })

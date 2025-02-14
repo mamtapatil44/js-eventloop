@@ -37,5 +37,7 @@
 
 # 4.What is the fastest way to update the DOM when dealing with large amounts of data?
 # ans:use dcreDocumentFragement(),innerhtml and append apeart from that we can use Virtualized Lists (Best for Extremely Large Datasets) means virtual scrolling with insersection obeservable
-#
+# take conatiner in js file: take function ehich cretaes row and retun the element for perticluatr item
+# create IntercationObervale using constructor fun IntersectionObserver with entry as of cfn ,2nd 2nd arg as root of coaninter , for netries use foreach loop check if entry i is Intersection then then only append child of entry atrgent by passing creteRow fun with arg entry.target.dataset.index and then unobserve(entry.taget)
+# use for loop for iteration create placeholder give index and height to it ,use obvser.observe(placholder, then append child for placehold with conatiner)
  
