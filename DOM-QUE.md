@@ -73,4 +73,23 @@
  #         b.You need precise positioning (beforebegin, afterbegin, etc.).
  #         c.You are working with large chunks of static HTML (e.g., rendering templates).
 
- 
+
+
+
+
+ # 7. How does the Shadow DOM impact event propagation? :to make shadow :use attachShadow({ mode: "open" })
+ # The Shadow DOM creates an encapsulated DOM tree inside an element, isolating styles and scripts from the main document. However, it also affects event propagation by modifying how events bubble up and pass through the DOM.
+ # How Events Propagate in the Shadow DOM :
+ # Normally, events in the regular DOM follow this three-phase propagation model:
+ #            a.Capturing Phase (Event travels from window → document → html → body → target element)
+ #            b.Target Phase (Event reaches the element that was interacted with)
+ #            c.Bubbling Phase (Event bubbles back up from the target to window)
+
+ # In the Shadow DOM, event propagation differs in two key ways:
+ # 1.Events Do Not Bubble Out of a Shadow DOM by Default
+ #              a.When an event occurs inside a Shadow DOM, it bubbles only within the shadow tree.
+ #              b.The event stops at the shadow boundary and does not reach the light DOM (outside world).refer example showdom
+ # 2.composed: true Allows Events to Escape the Shadow DOM:
+ #         By default, events inside the Shadow DOM do not escape. However, if an event is created with { composed: true },   it can cross the shadow boundary and propagate to the light DOM.
+ #
+ #
