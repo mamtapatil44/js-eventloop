@@ -21,4 +21,16 @@
 # uses : Use innerHTML when you need to insert HTML dynamically.
 #        Use outerHTML when you need to replace an entire element.
 #        Use textContent when you want to set or retrieve only text without parsing HTML.
+
+
+
+# 3. How would you dynamically create and append multiple elements to the DOM without causing excessive reflows?
+# ans: 4ways : Use a Document Fragment , Use innerHTML for Large Batches , Use append() or appendChild() in Bulk and Use requestAnimationFrame() for Heavy Updates.
+#        A DocumentFragment : is an in-memory lightweight container that allows batch operations before attaching   e elements to the actual DOM. This prevents excessive reflows.For this we cn use createDocumentFragment() , use for loop for bulk operatins and append to body with childAppend(),Efficient: Only one reflow occurs when the fragment is appended.
+#
+#
+#
+#
+#
+
  
