@@ -57,3 +57,23 @@
 
 
 # 14. What is event delegation, and how does it help optimize event handling?
+# Event delegation is a technique in JavaScript where you attach a single event listener to a parent element instead of multiple event listeners to child elements.
+# How Event Delegation Works
+# 1.Attach an event listener to a parent element instead of individual child elements.
+# 2.When an event occurs on a child element, it bubbles up to the parent.
+# 3.Use event.target to determine which child element triggered the event and handle it accordingly.
+# Why Use Event Delegation?
+# ✅ Improves Performance – Reduces the number of event listeners, which is crucial when working with many dynamically added elements.
+# ✅ Handles Dynamically Added Elements – Works even if child elements are added after the page loads.
+# ✅ Simplifies Code – Eliminates the need to attach and remove multiple event listeners.
+
+
+
+
+
+
+# 15. How can you allow bubbling for some elements but not others within the same event listener?
+# ✅ Use event.stopPropagation() conditionally to prevent bubbling only for specific elements.
+# ✅ Check event.target to determine which element was clicked.
+# ✅ Allows finer control over event bubbling within the same event listener.
+#
