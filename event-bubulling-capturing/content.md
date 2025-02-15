@@ -46,3 +46,14 @@
 
 
 # 13. If an event handler calls stopPropagation(), will other handlers on the same element execute?
+# Yes, other event handlers on the same element will still execute, even if event.stopPropagation() is called.
+# Why?
+# stopPropagation() only prevents the event from moving to parent elements (stopping bubbling or capturing).
+# It does not stop other event listeners attached to the same element from running.
+# If you want to prevent all event handlers on the same element from executing, use event.stopImmediatePropagation() instead of stopPropagation():
+
+
+
+
+
+# 14. What is event delegation, and how does it help optimize event handling?
