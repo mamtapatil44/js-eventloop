@@ -44,3 +44,11 @@
 # If event.preventDefault() is used inside a "keydown" event for Enter, the form won't submit when the user presses Enter inside an input field.
 # The input field will still accept text input as usual.
 # submit, keydown, search,textarae :working and correct aprroach find out event event.key === "Enter" and handle the conditions
+
+
+
+
+# 26. Can preventDefault() stop an anchor <a> tag from navigating if its href is a JavaScript function?
+# Yes, preventDefault() can prevent the default behavior of an anchor (<a>) tag, even if the href is a JavaScript function (e.g., href="javascript:void(0)" or href="javascript:myFunction()").
+# 1. How It Works:
+# When an anchor tag has a href attribute that points to a JavaScript function (either via javascript: syntax or a void(0) call), the default behavior is to execute that JavaScript when the anchor is clicked. However, calling event.preventDefault() in an event handler for the anchor prevents that JavaScript from being executed.
