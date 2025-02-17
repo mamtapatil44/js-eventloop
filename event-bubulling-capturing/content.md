@@ -77,3 +77,24 @@
 # ✅ Check event.target to determine which element was clicked.
 # ✅ Allows finer control over event bubbling within the same event listener.
 #
+
+
+
+
+
+
+# 16. If stopPropagation() is used inside a capturing-phase event handler, what will happen?
+# If stopPropagation() is used inside a capturing-phase event handler, it will prevent the event from propagating to the next event listener in both the capturing and bubbling phases.
+
+
+
+
+# 17. In which scenarios should you use stopImmediatePropagation() instead of stopPropagation()?
+# You should use stopImmediatePropagation() instead of stopPropagation() in scenarios where you need to completely halt the event from reaching any other event listeners on the same element, in addition to stopping propagation to parent elements
+
+
+
+
+
+
+# 18. Can stopPropagation() prevent a synthetic React event from bubbling? Why or why not?
