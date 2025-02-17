@@ -23,3 +23,14 @@
 # Unlike in jQuery, return false in vanilla JS has no special effect.
 # Ignored in Arrow Functions
 # Ignored in Asynchronous Code
+
+
+
+
+# 24. How do browsers behave differently when calling preventDefault() on form submission events?
+# Calling event.preventDefault() on a form submission event generally prevents the form from being submitted to the server, but browser behavior can vary depending on factors such as form methods, input types, and browser implementations.
+# 1. Standard Behavior Across Browsers
+# -In most cases, calling event.preventDefault() inside a "submit" event listener stops the form from being submitted.
+#
+#
+#
