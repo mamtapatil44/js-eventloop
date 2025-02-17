@@ -69,3 +69,26 @@
 # 2.touchmove: Prevents the default scrolling behavior (e.g., page or element scroll).
 # 3.touchend: Prevents the event from completing its default action, such as triggering a click or finishing a swipe action.
 
+
+
+
+
+
+# 28. How can preventDefault() affect drag-and-drop events?
+# A typical drag-and-drop interaction involves the following key events:
+# 1.dragstart: Fired when the drag operation starts (when the user begins to drag an element).
+# 2.dragover: Fired when a dragged element is over a valid drop target (while dragging over it).
+# 3.drop: Fired when the dragged element is dropped onto the drop target.
+# 4.dragend: Fired when the drag operation ends (either successfully or aborted).
+
+#imp points::::::#######
+# Calling preventDefault() in the dragstart event typically doesn't have a significant effect because this event's default behavior is not usually something you would need to prevent.
+# The dragover event fires repeatedly while a dragged item is over a drop target. By default, this event allows the dragged element to be placed on the drop target. Calling preventDefault() on the dragover event is essential if you want to enable the drop functionality.
+# Without preventDefault(), the drop target will not be active, and the drop event will not fire.
+# drop Event
+# Calling preventDefault() in the drop event prevents the default behavior, which is typically handling data (like adding the dragged item to the target container) automatically.
+
+# If you want to implement custom logic for handling the drop (e.g., changing the target's content or structure), calling preventDefault() is essential.
+# The dragend event indicates that the drag operation has finished, and it is less likely that preventDefault() would be used here because this event is primarily used for cleaning up (e.g., resetting styles or removing visual cues).
+
+
