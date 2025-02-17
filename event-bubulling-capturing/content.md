@@ -98,3 +98,32 @@
 
 
 # 18. Can stopPropagation() prevent a synthetic React event from bubbling? Why or why not?
+# No, stopPropagation() cannot fully prevent a synthetic React event from bubbling within React's event system. This is because React uses its own Synthetic Event system, which is different from the native DOM event system. 
+# 1.React uses event delegation:
+# ------React attaches event listeners to the root document instead of individual elements. This helps with performance but means React events don't behave exactly like native events.
+# 2React reuses synthetic events:
+# ------React pools synthetic events for performance reasons. Even if stopPropagation() is called, the event might still propagate within the React event system.
+
+
+
+# 19. How does event bubbling work with iframes?
+# event bubbling does not cross iframe boundaries because each iframe creates its own separate document context with its own DOM and JavaScript execution environment. Here’s how it works:
+# 1.When an event occurs inside an iframe, it bubbles up only within the iframe’s DOM.
+# 2.The event will not propagate to the parent document.
+
+# How to Communicate Events Between iframe and Parent
+# --since bubbling stops at the iframe boundary, you need cross-document communication methods like:
+# 1.postMessage() API (Best approach) : window.parent.postMessage("iframeButtonClicked", "*");
+# 2.Detecting iframe focus/blur
+
+
+
+
+
+
+
+
+# 20. If an event listener is added with { once: true }, will stopPropagation() affect other listeners?
+# No, stopPropagation() does not affect whether other event listeners with { once: true } execute. However, the once option and stopPropagation() behave independently. 
+
+
