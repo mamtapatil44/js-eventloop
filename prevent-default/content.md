@@ -52,3 +52,20 @@
 # Yes, preventDefault() can prevent the default behavior of an anchor (<a>) tag, even if the href is a JavaScript function (e.g., href="javascript:void(0)" or href="javascript:myFunction()").
 # 1. How It Works:
 # When an anchor tag has a href attribute that points to a JavaScript function (either via javascript: syntax or a void(0) call), the default behavior is to execute that JavaScript when the anchor is clicked. However, calling event.preventDefault() in an event handler for the anchor prevents that JavaScript from being executed.
+
+
+
+
+
+
+
+# 27. What happens when calling preventDefault() on a touch event on mobile devices?
+# Calling event.preventDefault() on a touch event (such as touchstart, touchmove, touchend) on mobile devices has different effects depending on the event type and the context. Generally, it prevents the default action associated with the touch event, but the precise behavior varies based on factors like scrolling, gestures, and the browser.
+
+# When you call preventDefault() on touch events, you are preventing the default behavior that is associated with those events. For mobile devices, this can mean a variety of behaviors being blocked, depending on which touch event you're interacting with.
+
+# Common Effects of preventDefault() on Touch Events:
+# 1.touchstart: Prevents the start of a touch interaction, like triggering a "tap" event.
+# 2.touchmove: Prevents the default scrolling behavior (e.g., page or element scroll).
+# 3.touchend: Prevents the event from completing its default action, such as triggering a click or finishing a swipe action.
+
