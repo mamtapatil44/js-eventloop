@@ -34,3 +34,13 @@
 #
 #
 #
+
+
+
+
+# 25. What happens if you call preventDefault() on a keydown event for the "Enter" key inside a form input?
+# Calling event.preventDefault() inside a keydown event handler for the "Enter" key inside a form input prevents the default behavior of the Enter key, which is typically submitting the form. However, behavior may vary across browsers and input types.
+# 1. Expected Behavior in Most Browsers
+# If event.preventDefault() is used inside a "keydown" event for Enter, the form won't submit when the user presses Enter inside an input field.
+# The input field will still accept text input as usual.
+# submit, keydown, search,textarae :working and correct aprroach find out event event.key === "Enter" and handle the conditions
