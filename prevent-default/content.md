@@ -92,3 +92,18 @@
 # The dragend event indicates that the drag operation has finished, and it is less likely that preventDefault() would be used here because this event is primarily used for cleaning up (e.g., resetting styles or removing visual cues).
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+# 30. What will happen if you call preventDefault() inside a passive: true event listener?
+# When you add an event listener with the { passive: true } option, the browser expects that the listener will not call preventDefault(). This is done to optimize performance, especially for events like touchstart, touchmove, and wheel, where the browser can immediately perform the default action (like scrolling) without waiting for the JavaScript code to execute.
+# If you try to call preventDefault() inside a passive event listener, the browser will ignore the call to preventDefault() and may also log a warning to the console. The default behavior (such as scrolling or zooming) will still occur.
